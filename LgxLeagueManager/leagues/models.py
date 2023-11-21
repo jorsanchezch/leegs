@@ -25,7 +25,10 @@ class LeagueDefaults(BaseModel):
     is_online_payment_allowed = models.BooleanField(default=False)
     is_cash_payment_allowed = models.BooleanField(default=False)
    
+    class Meta:
+        db_table = 'leagues_league_defaults'
 class Membership(models.Model):
+        
     league = models.ForeignKey(League, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     manager = models.BooleanField(default=False)
@@ -48,14 +51,16 @@ class Occurence(BaseModel):
 class Attendance(BaseModel):
     occurrence = models.ForeignKey(Occurence, on_delete=models.CASCADE)
     member = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
-    attendant_alias = models.CharField(max_length=255, null=True)
+    attendee_alias = models.CharField(max_length=255, null=True, unique=True)
     has_paid = models.BooleanField(default=False)
     has_confirmed_attendance = models.BooleanField(default=False)
     is_invited = models.BooleanField(default=False)
     
     class Meta:
         constraints = [
-            models.UniqueConstraint(fields=['occurrence', 'user'], name='unique_occurrence_attendee')
+            models.UniqueConstraint(fields=['occurrence', 'member'], name='unique_occurrence_attendee'),
+            models.UniqueConstraint(fields=['occurrence', 'attendee_alias'], name='unique_occurrence_attendee_alias')
+
         ]
         
     def clean(self):
