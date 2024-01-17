@@ -45,9 +45,9 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'rest_framework_simplejwt.token_blacklist',
     #project apps
-    'core',
-    'users',
-    'leagues'
+    'apps.core',
+    'apps.users',
+    'apps.leagues'
 ]
 
 REST_FRAMEWORK = {

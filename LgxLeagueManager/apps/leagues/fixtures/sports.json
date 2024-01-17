@@ -1,0 +1,62 @@
+[
+    {
+        "pk": 1,
+        "name": "Soccer"
+    },
+    {
+        "pk": 2,
+        "name": "Basketball"
+    },
+    {
+        "pk": 3,
+        "name": "Volleyball"
+    },
+    {
+        "pk": 4,
+        "name": "Hockey"
+    },
+    {
+        "pk": 5,
+        "name": "Tennis"
+    },
+    {
+        "pk": 6,
+        "name": "Karting"
+    },
+    {
+        "pk": 7,
+        "name": "American Football"
+    },
+    {
+        "pk": 8,
+        "name": "Baseball"
+    },
+    {
+        "pk": 9,
+        "name": "Rugby"
+    },
+    {
+        "pk": 10,
+        "name": "Golf"
+    },
+    {
+        "pk": 11,
+        "name": "Car Racing"
+    },
+    {
+        "pk": 12,
+        "name": "Cycling"
+    },
+    {
+        "pk": 13,
+        "name": "Swimming"
+    },
+    {
+        "pk": 14,
+        "name": "Boxing"
+    },
+    {
+        "pk": 15,
+        "name": "Martial Arts"
+    }
+]
