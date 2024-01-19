@@ -1,4 +1,4 @@
 nodemon index.js
-cd lgx-presentation
+cd leegs-presentation
 npm run dev
 cd ..
