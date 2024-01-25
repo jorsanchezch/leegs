@@ -1,32 +1,30 @@
 import Head from 'next/head'
 import Layout from '../components/layout'
-
+import * as serviceWorkerRegistration from '../serviceWorkerRegistration';
+import reportWebVitals from '../reportWebVitals';
 
 export default function Landing() {
-  const leaguesPerCategory = [
+  const leagues = [
     {
       category: "football",
-      leagues: ["soccer town", "santa fe FC"]
+      names: ["soccer town", "santa fe FC"]
     },
     {
       category: "basketball",
-      leagues: ["olimpico"]
+      names: ["olimpico"]
     },
     {
       category: "super smash brothers",
-      leagues: ["battlezone"]
+      names: ["battlezone"]
     },
   ]
 
-  const leagueRows = leaguesPerCategory.map((category, leagues) =>
-  <div className="grid grid-cols-n gap-4 overflow-x-auto">
-    <img
-    className="rounded-lg"
-    src="https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
-    alt={category}
-    />
-  </div>
+  const leagueRows = leagues.forEach((league) =>
+    <div className="grid grid-cols-n gap-4 overflow-x-auto">
+      {league.category}
+    </div>
   );
+
   return (
     <Layout>
       <Head>
@@ -39,3 +37,7 @@ export default function Landing() {
     </Layout>
   )
 }
+
+// serviceWorkerRegistration.register();
+
+reportWebVitals();

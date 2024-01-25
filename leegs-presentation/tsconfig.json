@@ -109,7 +109,8 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "src/components/navbar.tsx" 
   ],
   "exclude": [
     "node_modules"
