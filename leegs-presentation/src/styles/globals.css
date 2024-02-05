@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+ 
 html,
 body {
   font-family: 'Inter';
@@ -9,4 +10,8 @@ body {
 .infinite-row-col {
   width: 22%;
   height: auto;
+}
+
+.hidden {
+  display: none;
 }
