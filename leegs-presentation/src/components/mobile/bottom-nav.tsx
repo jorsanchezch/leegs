@@ -10,7 +10,7 @@ export default function SimpleBottomNavigation() {
   const [value, setValue] = React.useState(0);
 
   return (
-    <Box sx={{ width: 500 }}>
+    <Box className="md:hidden fixed inset-x-0 bottom-0">
       <BottomNavigation
         showLabels
         value={value}

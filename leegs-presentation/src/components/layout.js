@@ -1,15 +1,18 @@
-import Nav from './navbar.tsx';
-import BottomNav from './bottom-nav.tsx'; 
-import styles from '../styles/Layout.module.css';
-import { Inter } from 'next/font/google'
+import BottomNav from './mobile/bottom-nav.tsx'; 
+import Header from './mobile/header.tsx';
+import styles from '../styles/modules/Layout.module.scss';
+import { Rubik } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] });
+const rubik = Rubik({ subsets: ['latin'] });
 
 export default function Layout({ children }) {
     return (
-    <main className={`${styles.main} ${inter.className}`}>
-        <BottomNav/>
-        {children}
-    </main>
+        <>
+            <Header/>
+                <main className={`${styles.main} ${rubik.className} h-full p-3`}>
+                    {children}
+                </main>
+            <BottomNav/>
+        </>
     );
 }

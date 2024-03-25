@@ -1,0 +1,56 @@
+@import 'variables';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+    color: var(--text);
+    background-color: var(--primary);
+}
+
+h1 {
+    @apply font-bold md:text-7xl text-5xl;
+}
+
+h6 {
+    @apply text-2xl font-semibold;
+}
+
+.iconWrapper {
+    @apply flex items-center;
+}
+
+input {
+    background-color: var(--secondary);
+
+    &::placeholder {
+        color: var(--text);
+    }
+}
+
+input:not(.w-0), .iconContainer {
+    box-shadow: var(--input-shadow);
+    border-radius: var(--border-radius); 
+    @apply px-4;
+
+    .iconWrapper, +.iconWrapper {
+        @apply pr-4;
+    }
+}
+
+.bar {
+    background-color: var(--secondary);
+    @apply w-full static p-4 flex justify-between min-h-20;
+}
+
+.easeOut{
+    transition: all 0.5s ease-out;
+}
+
+@media screen and (min-width: var(--screen-sm)) {
+}
+
+@media screen and (min-width: var(--screen-md)) {
+}
