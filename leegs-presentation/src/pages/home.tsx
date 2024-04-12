@@ -52,11 +52,15 @@ const Home: React.FC<HomeProps> = ({ loggedIn, users }) => {
 
       const leagueRows = leagues.map((league) => {
         return (
-          <Link href={`/league/${encodeURIComponent(league.id)}`}>
+          <Link 
+            key={league.category} 
+            href={`/league/${encodeURIComponent(league.id)}`}
+          >
             <Card
               key={league.category}
               title={league.category}
               content={league.names.join(', ')}
+              image="https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg"
             /> 
           </Link>
         )

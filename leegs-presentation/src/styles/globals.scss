@@ -4,10 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
+html {
     color: var(--text);
-    background-color: var(--primary);
+    background-color: var(--secondary);
+    letter-spacing: -0.05rem; // Josefin Sans font only.
 }
 
 h1 {
@@ -18,31 +18,46 @@ h6 {
     @apply text-2xl font-semibold;
 }
 
-.iconWrapper {
-    @apply flex items-center;
-}
-
-input {
-    background-color: var(--secondary);
+input, button {
+    @apply p-4 max-w-sm;
 
     &::placeholder {
-        color: var(--text);
+        color: var(--text-dark);
     }
 }
 
-input:not(.w-0), .iconContainer {
-    box-shadow: var(--input-shadow);
-    border-radius: var(--border-radius); 
-    @apply px-4;
-
-    .iconWrapper, +.iconWrapper {
-        @apply pr-4;
+input, button, textarea, .box {
+    
+    &:not(.default) {
+        @apply bg-primary rounded-lg shadow-lg border-b-2 border-accent;
     }
+    
+    &.secondary, &.box button, &.box input, &.box textarea {
+        @apply bg-secondary text-dark border-accentAlt;
+    }
+}
+
+.iconWrapper {
+
+    +input {
+        background-color: inherit;
+    }
+        
+    @apply flex items-center;
+    
 }
 
 .bar {
-    background-color: var(--secondary);
-    @apply w-full static p-4 flex justify-between min-h-20;
+    box-shadow: var(--box-shadow); 
+    align-items: center;
+    @apply bg-primary w-full static p-4 flex justify-between min-h-20;
+}
+
+.logo {
+    border: 1px solid;
+    padding: 0.5rem 0.75rem;
+    line-height: 1;
+    text-decoration: underline;
 }
 
 .easeOut{

@@ -24,6 +24,7 @@ module.exports = {
       primary: 'var(--primary)',
       secondary: 'var(--secondary)',
       accent: 'var(--accent)',
+      accentAlt: 'var(--accent-alt)',
       light: 'var(--text)',
       dark: 'var(--text-dark)',
     },

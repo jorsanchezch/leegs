@@ -1,7 +1,9 @@
 import '../styles/globals.scss';
-
 import { useEffect } from 'react';
 import { SCREENS } from '../constants.ts';
+import { Josefin_Sans } from 'next/font/google'
+
+const josefin = Josefin_Sans({ subsets: ['latin'] });
 
 export default function App({ Component, pageProps }) {
   
@@ -18,6 +20,13 @@ export default function App({ Component, pageProps }) {
     setScreenSize('xl2', SCREENS.XL2);
     setScreenSize('xl3', SCREENS.XL3);
   }, []);
-  
-  return <Component {...pageProps} />
+        
+  return <>
+      <style jsx global>{`
+      html {
+        font-family: ${josefin.style.fontFamily};
+      }
+    `}</style>
+    <Component {...pageProps} />
+  </>
 }

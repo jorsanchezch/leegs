@@ -1,10 +1,3 @@
-.card {
-    background-color: var(--secondary);
-    @apply max-w-sm rounded overflow-hidden shadow-lg;
-}
-
 .tag {
-    background-color: var(--primary);
-    color: var(--text-dark);
-    @apply inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2;
+    @apply bg-secondary text-dark inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2;
 }
