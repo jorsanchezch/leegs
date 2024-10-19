@@ -70,20 +70,18 @@ const Home: React.FC<HomeProps> = ({ loggedIn, users }) => {
 
     return (
         <Layout>
-            <h1 className="text-dark">Welcome to <br/> the Home Page</h1>
-            <div className="grid-cols-1 md:grid-cols-2" style={{ display: 'grid', gap: '1.5rem' }}>
-              <div className='mx-auto my-3 md:mx-0'>
-                {/* <Calendar value={value}/> */}
-              </div>
+            <h1 className="text-primary">Welcome to <br/> the Home Page</h1>
+            <div className='mx-auto my-3 md:mx-0'>
+              {/* <Calendar value={value}/> */}
+            </div>
 
-              {!loggedIn ? (
-                <div className="grid-cols-1 md:grid-cols-auto" style={{ display: 'grid', gap: '1.5rem' }}>
-                    {leagueRows}
-                </div>
-              ) : (
-                  <p>Please log in to view the users.</p>
-              )}
-          </div>
+            {!loggedIn ? (
+              <div className="grid-cols-auto justify-center" style={{ display: 'grid', gap: '1.5rem' }}>
+                  {leagueRows}
+              </div>
+            ) : (
+                <p>Please log in to view the users.</p>
+            )}
         </Layout>
     );
 };

@@ -11,7 +11,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ children, title, content, image }) => {
 
   return (
-    <div className='box overflow-hidden max-w-sm bg-primary'>
+    <div className={`box overflow-hidden max-w-sm bg-primary ${styles.card}`}>
         {image && <img className="w-full" src={image} alt={title} />}
         <div className="px-6 py-4">
         {title && <div className="font-bold text-xl mb-2">{title}</div>}

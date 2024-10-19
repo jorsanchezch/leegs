@@ -1,4 +1,5 @@
 import '../styles/globals.scss';
+import '../styles/overrides.scss';
 import { useEffect } from 'react';
 import { SCREENS } from '../constants.ts';
 import { Josefin_Sans } from 'next/font/google'

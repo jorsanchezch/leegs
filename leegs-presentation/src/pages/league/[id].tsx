@@ -9,7 +9,7 @@ const LeaguePage = () => {
 
     return (
         <Layout>
-            <h1 className='text-dark'>League {id}</h1>
+            <h1 className='text-primary'>League {id}</h1>
             {/* Render league information and participant list here */}
         </Layout>
     );

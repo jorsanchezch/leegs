@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 
-import { dark, light } from '@mui/material/styles/createPalette';
 import { SCREENS } from './src/constants';
 
 module.exports = {
@@ -27,6 +26,8 @@ module.exports = {
       accentAlt: 'var(--accent-alt)',
       light: 'var(--text)',
       dark: 'var(--text-dark)',
+      black: 'var(--black)',
+      transparent: 'transparent',
     },
     extend: {
       gridTemplateColumns: {

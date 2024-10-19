@@ -1,13 +1,13 @@
 import * as React from 'react';
-import SearchIcon from '@mui/icons-material/Search';
+import { Search } from 'lucide-react';
 
 
 export default function SearchInput() {
 
   return (
     <div className={`flex box secondary px-4`}>
-        <div className='iconWrapper'>
-            <SearchIcon  />
+        <div className='icon-wrapper'>
+            <Search  />
         </div>
         <input
             placeholder="Search…"
