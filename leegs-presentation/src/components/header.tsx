@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Link from 'next/link';
-import styles from '../styles/modules/Header.module.scss';
+import styles from 'styles/modules/Header.module.scss';
 import OffsideMenu from './offside-menu';
 import ProfileButton from './profile-button';
 

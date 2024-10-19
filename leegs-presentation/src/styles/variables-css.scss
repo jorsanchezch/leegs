@@ -1,0 +1,14 @@
+:root {
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+  --accent: #{$accent};
+  --accent-alt: #{$accent-alt};
+
+  --gray: #{$gray};
+  --black: #{$black};
+
+  --text: #{$text};
+  --text-dark: #{$text-dark};
+  --box-shadow: #{$box-shadow};
+  --border-radius: #{$border-radius};
+}

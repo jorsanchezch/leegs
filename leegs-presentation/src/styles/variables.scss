@@ -1,7 +1,7 @@
 $primary: #e49a61;
 $secondary: #4a1920;
-$accent: #764622;
-$accent-alt: #d12037;
+$accent: darken($primary, 30%);
+$accent-alt: lighten($secondary, 30%);
 
 $black: #000000;
 $gray: #4a4a4a;
@@ -10,18 +10,3 @@ $text: #d4e9eb;
 $text-dark: #202727;
 $box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.4);
 $border-radius: 0.5rem;
-
-:root {
-  --primary: #{$primary};
-  --secondary: #{$secondary};
-  --accent: #{$accent};
-  --accent-alt: #{$accent-alt};
-
-  --gray: #{$gray};
-  --black: #{$black};
-
-  --text: #{$text};
-  --text-dark: #{$text-dark};
-  --box-shadow: #{$box-shadow};
-  --border-radius: #{$border-radius};
-}

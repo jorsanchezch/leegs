@@ -43,7 +43,7 @@ const Dropdown: React.FC<DropdownProps> = ({ trigger, menu, align = 'left' }) =>
         <div 
           className={`absolute ${align}-0 mt-1 rounded-md shadow-xl bg-primary`}
         >
-          <div className="py-1" role="menu" aria-orientation="vertical">
+          <div className="py-1 link-list" role="menu" aria-orientation="vertical">
             {menu.map((item, index) => (
               <a
                 key={index}

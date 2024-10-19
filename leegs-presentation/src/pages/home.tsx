@@ -71,7 +71,7 @@ const Home: React.FC<HomeProps> = ({ loggedIn, users }) => {
     return (
         <Layout>
             <h1 className="text-primary">Welcome to <br/> the Home Page</h1>
-            <div className='mx-auto my-3 md:mx-0'>
+            <div className='mx-auto mt-5 md:mx-0'>
               {/* <Calendar value={value}/> */}
             </div>
 
