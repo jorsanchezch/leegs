@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect, cloneElement, ReactElement } from 'react';
+import styles from 'styles/modules/Select.module.scss';
 
 interface MenuItem {
   label: string;
@@ -41,14 +42,14 @@ const Dropdown: React.FC<DropdownProps> = ({ trigger, menu, align = 'left' }) =>
 
       {isOpen && (
         <div 
-          className={`absolute ${align}-0 mt-1 rounded-md shadow-xl bg-primary`}
+        className={`absolute ${align}-0 ${styles.dropdown}`}
         >
-          <div className="py-1 link-list" role="menu" aria-orientation="vertical">
+          <div className="py-1" role="menu" aria-orientation="vertical">
             {menu.map((item, index) => (
               <a
                 key={index}
                 href={item.href}
-                className="block px-4 py-2 text-sm"
+                className={`block ${styles.option}`}
                 role="menuitem"
                 onClick={(e) => {
                   if (item.onClick) {

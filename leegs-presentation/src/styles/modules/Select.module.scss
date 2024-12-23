@@ -1,0 +1,53 @@
+.selectButton {
+    text-align: left;
+  
+    &:hover {
+    }
+  
+    &:focus {
+    }
+  
+    & > svg {
+    }
+
+  &:hover {
+  }
+}
+
+.dropdown {
+  border-radius: 12px;
+  background: $primary;
+
+   @apply min-w-44 mt-2 p-2;
+}
+
+.option {
+  list-style: none;
+  border-radius: 8px;
+  cursor: default;
+
+  @apply p-2;
+
+  + .option {
+    border-top-width: 1px;
+    border-image: linear-gradient(to right, $primary 2.5%, $secondary , $primary 97.5%) 1;
+  }
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--primary);
+  }
+
+  &:focus {
+    background-color: var(--primary);
+    font-weight: 600;
+  }
+  
+  &:hover {
+    background-color: lighten($primary, 10%);
+  }
+
+}

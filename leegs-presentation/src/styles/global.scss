@@ -7,7 +7,7 @@
 html {
     color: var(--text-dark);
     background-color: var(--secondary);
-    letter-spacing: -0.05rem; // Josefin Sans font only.
+    letter-spacing: -0.02em; // Josefin Sans font only.
 }
 
 h1 {
@@ -18,37 +18,50 @@ h6 {
     @apply text-2xl font-semibold;
 }
 
-input, .button, textarea, select {
+input, .button, textarea, select, .select {
     line-height: 1;
     min-height: 3.25rem;
     min-width: 3.25rem;
     color: var(--text-dark);
     background-color: var(--primary);
 
-    @apply p-4 rounded-lg shadow-lg border-b-2 border-accent;
+    @apply p-4 rounded-md shadow-lg border-b-2 border-accent;
 
     &:hover, &:focus{
         background-color: darken($primary, 5%);
+    }
+
+    &:focus {
         border: none;
     }
+}
+
+fieldset {
+    @apply space-y-4;
 }
 
 form {
     label {
         color: var(--text);
+        @apply text-sm font-medium;
     }
 }
 
-input::placeholder {
-    color: var(--text);
+input {
+    @apply focus:ring focus:ring-opacity-50;
+
+    &::placeholder {
+        @apply text-dark;
+    }
 }
 
 svg {
     display: inline;
     stroke: var(--text-dark);
+    stroke-width: 0.175rem;
 
     path {
-        fill: var(--text-dark);
+        fill: transparent;
     }
 
 }
@@ -56,10 +69,6 @@ svg {
 .secondary {
     &svg, >svg{
         stroke: var(--text);
-    }
-
-    path {
-        fill: var(--text);
     }
 
     &.button, &input, &textarea {
@@ -75,13 +84,6 @@ svg {
 
     +input {
         background-color: inherit;
-    }
-}
-
-.link-list {
-    a + a, li + li{
-        border-top-width: 1px;
-        border-image: linear-gradient(to right, $primary 20%, $secondary , $primary 80%) 1;
     }
 }
 

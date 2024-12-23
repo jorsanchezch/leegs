@@ -1,38 +1,37 @@
 import React, { useState } from 'react';
 import styles from 'styles/modules/Toggle.module.scss';
+import { toSnakeCase } from 'utils';
 
-// Define the props interface
 interface ToggleProps {
-  isChecked?: boolean;
-  id: string;
-  name: string;
+  defaultState?: boolean;
+  id?: string;
+  name?: string;
   label: string;
 }
 
-const Toggle: React.FC<ToggleProps> = ({ 
-  isChecked = false, 
-  id, 
-  name, 
-  label 
-}) => {
-  const [isCheckedState, setIsCheckedState] = useState<boolean>(isChecked);
+const Toggle: React.FC<ToggleProps> = ({ defaultState = false, id, name, label }) => {
+  const [isChecked, setIsChecked] = useState<boolean>(defaultState);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setIsCheckedState(event.target.checked);
+    setIsChecked(event.target.checked);
   };
 
+  const defaultId = `is_${toSnakeCase(label)}`;
+
   return (
-    <label className={styles.switch}>
-      <input
-        hidden
-        type="checkbox"
-        id={id}
-        name={name}
-        checked={isCheckedState}
-        onChange={handleChange}
-        className={styles.checkbox}
-      />
-      <div className={styles.slider}></div>
+    <label className={styles.label}>
+      <p>{label}</p>
+      <div className={styles.toggle}>
+        <input
+          type="checkbox"
+          id={id ?? defaultId}
+          name={name ?? defaultId}
+          checked={isChecked}
+          onChange={handleChange}
+          className={styles.checkbox}
+        />
+        <span className={styles.slider} />
+      </div>
     </label>
   );
 };

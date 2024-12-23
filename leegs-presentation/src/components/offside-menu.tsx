@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { X, Menu } from 'lucide-react';
-import styles from 'styles/modules/Offside.module.scss';
+import styles from 'styles/modules/Select.module.scss';
 import Link from 'next/link';
 
 interface MenuItem {
@@ -32,7 +32,7 @@ const OffsideMenu: React.FC<OffsideMenuProps> = ({ menuItems = defaultMenuItems 
       <button
         onClick={toggleMenu}
         aria-label="Toggle menu"
-        className="button secondary p-3"
+        className="button secondary !p-3"
       >
         <Menu className='secondary' size={24} />
       </button>
@@ -45,7 +45,7 @@ const OffsideMenu: React.FC<OffsideMenuProps> = ({ menuItems = defaultMenuItems 
       )}
 
       <div
-        className={`${styles.menu} fixed flex items-center top-0 right-0 h-full w-1/2 md:w-1/3 bg-primary 
+        className={`fixed flex items-center top-0 right-0 h-full w-1/2 md:w-1/3 bg-primary 
           shadow-lg z-50 transition-transform duration-300 ease-in-out ${
           isOpen ? '-translate-x-0' : 'translate-x-full'
         }`}
@@ -57,10 +57,10 @@ const OffsideMenu: React.FC<OffsideMenuProps> = ({ menuItems = defaultMenuItems 
         >
           <X size={24} />
         </button>
-        <nav className="px-4 w-full link-list">
+        <nav className="px-4 w-full">
           <ul>
             {menuItems.map((item, index) => (
-              <li key={index} className='py-4'>
+              <li key={index} className={`${styles.option}`}>
                 <Link href={item.href} className='block w-full hover:underline'>
                   {item.label}
                 </Link>

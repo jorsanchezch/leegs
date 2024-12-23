@@ -33,6 +33,9 @@ module.exports = {
       gridTemplateColumns: {
         'auto': 'repeat(auto-fit, minmax(350px, 0fr))',
       },
+      padding: {
+        '15': '3.75rem',
+      }
     },
   },
   plugins: [],

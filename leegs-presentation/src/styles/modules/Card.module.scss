@@ -1,5 +1,7 @@
 .card {
     transition: transform 0.3s ease;
+    border-bottom: var(--accent) 2px solid;
+    border-radius: var(--border-radius);
     &:hover {
         transform: translateY(-5px);
     }
